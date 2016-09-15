@@ -19,8 +19,7 @@ angular.module('encuestaApp')
 
 		$scope.btnTxt = 'Siguiente';
 
-		$scope.siguiente = function() {
-			slider.noUiSlider.set( $scope.pregunta );
+		$scope.siguiente = function() {			
 			procesa($scope.pregunta);
 		}
 
@@ -33,6 +32,7 @@ angular.module('encuestaApp')
 			var indiceAct = arg - 1;
 			var indiceNext = arg;
 			if($scope[preguntaAct]) {
+				slider.noUiSlider.set( $scope.pregunta );
 				if($scope.pregunta == 21) {
 					$rootScope.titulo = null;
 					$rootScope.gracias = true;
