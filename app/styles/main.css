@@ -59,6 +59,58 @@ body {
   margin-top: 28px;
 }
 
+.carrete {
+  height: 260px;
+  overflow: hidden;
+}
+
+.pregunta {
+  opacity: 0;
+}
+
+.pregunta:first-child {
+  opacity: 1;
+}
+
+.subtitulo {
+  opacity: 0;
+  height: 0;
+}
+
+.exce [type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:after, .exce [type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:after, .exce [type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:before, [type="radio"].with-gap:checked + label:after {
+  background-color: #00b169;
+  border: 2px solid #00b169;
+}
+
+.mb [type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:after, .mb [type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:after, .mb [type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:before, [type="radio"].with-gap:checked + label:after {
+  background-color: #00d374;
+  border: 2px solid #00d374;
+}
+
+.bn [type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:after, .bn [type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:after, .bn [type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:before, [type="radio"].with-gap:checked + label:after {
+  background-color: #f6ab36;
+  border: 2px solid #f6ab36;
+}
+
+.reg [type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:after, .reg [type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:after, .reg [type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:before, [type="radio"].with-gap:checked + label:after {
+  background-color: #f2774b;
+  border: 2px solid #f2774b;
+}
+
+.malo [type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:after, .malo [type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:after, .malo [type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:before, [type="radio"].with-gap:checked + label:after {
+  background-color: #ef4836;
+  border: 2px solid #ef4836;
+}
+
+[disabled].noUi-connect, [disabled] .noUi-connect {
+  background: #26A69A !important;
+}
+
+h6 {
+  font-size: 2em;
+  padding-bottom: 25px;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
@@ -77,4 +129,7 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+
+  .pregunta {
+  }  
 }

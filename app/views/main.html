@@ -1,36 +1,583 @@
-<div>
-    <div class="section">
-        <div class="container">
-            <div class="row">
-                <div class="col s6 offset-s4">
-                    <h5 class="left-align">Atención y Servicio</h5>
-                    <form action="#">
-                        <p>
-                            <input name="group1" type="radio" id="exce1" />
-                            <label for="exce1">Excelente</label>
-                        </p>
-                        <p>
-                            <input name="group1" type="radio" id="mb1" />
-                            <label for="mb1">Muy bueno</label>
-                        </p>
-                        <p>
-                            <input name="group1" type="radio" id="bn1" />
-                            <label for="bn1">Bueno</label>
-                        </p>
-                        <p>
-                            <input name="group1" type="radio" id="reg1" />
-                            <label for="reg1">Regular</label>
-                        </p>
-                        <p>
-                            <input name="group1" type="radio" id="malo1" />
-                            <label for="malo1">Malo</label>
-                        </p>
-                    </form>
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <form action="#">
+                <div class="carrete">
+                    <!-- Pregunta 1 -->
+                    <div class="pregunta animated" ng-show="pregunta == 1">
+                        <div class="col s12">
+                            <h5 class="center-align">Atención y Servicio</h5>
+                        </div>
+                        <div class="col s12 offset-s4">
+                            <p class="exce">
+                                <input name="group1" type="radio" id="exce1" ng-model="pre1" value="1" />
+                                <label for="exce1">Excelente</label>
+                            </p>
+                            <p class="mb">
+                                <input name="group1" type="radio" id="mb1" ng-model="pre1" value="2" />
+                                <label for="mb1">Muy bueno</label>
+                            </p>
+                            <p class="bn">
+                                <input name="group1" type="radio" id="bn1" ng-model="pre1" value="3" />
+                                <label for="bn1">Bueno</label>
+                            </p>
+                            <p class="reg">
+                                <input name="group1" type="radio" id="reg1" ng-model="pre1" value="4" />
+                                <label for="reg1">Regular</label>
+                            </p>
+                            <p class="malo">
+                                <input name="group1" type="radio" id="malo1" ng-model="pre1" value="5" />
+                                <label for="malo1">Malo</label>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 2 -->
+                    <div class="pregunta animated" ng-show="pregunta == 2">
+                        <div class="col s12">
+                            <h5 class="center-align">Alimentos del Restaurant</h5>
+                        </div>
+                        <div class="col s12 offset-s4">
+                            <p class="exce">
+                                <input name="group2" type="radio" id="exce2" ng-model="pre2" value="1" />
+                                <label for="exce2">Excelente</label>
+                            </p>
+                            <p class="mb">
+                                <input name="group2" type="radio" id="mb2" ng-model="pre2" value="2" />
+                                <label for="mb2">Muy bueno</label>
+                            </p>
+                            <p class="bn">
+                                <input name="group2" type="radio" id="bn2" ng-model="pre2" value="3" />
+                                <label for="bn2">Bueno</label>
+                            </p>
+                            <p class="reg">
+                                <input name="group2" type="radio" id="reg2" ng-model="pre2" value="4" />
+                                <label for="reg2">Regular</label>
+                            </p>
+                            <p class="malo">
+                                <input name="group2" type="radio" id="malo2" ng-model="pre2" value="5" />
+                                <label for="malo2">Malo</label>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 3 -->
+                    <div class="pregunta animated" ng-show="pregunta == 3">
+                        <div class="col s12">
+                            <h5 class="center-align">Instalaciones y Ubicación</h5>
+                        </div>
+                        <div class="col s12 offset-s4">
+                            <p class="exce">
+                                <input name="group3" type="radio" id="exce3" ng-model="pre3" value="1" />
+                                <label for="exce3">Excelente</label>
+                            </p>
+                            <p class="mb">
+                                <input name="group3" type="radio" id="mb3" ng-model="pre3" value="2" />
+                                <label for="mb3">Muy bueno</label>
+                            </p>
+                            <p class="bn">
+                                <input name="group3" type="radio" id="bn3" ng-model="pre3" value="3" />
+                                <label for="bn3">Bueno</label>
+                            </p>
+                            <p class="reg">
+                                <input name="group3" type="radio" id="reg3" ng-model="pre3" value="4" />
+                                <label for="reg3">Regular</label>
+                            </p>
+                            <p class="malo">
+                                <input name="group3" type="radio" id="malo3" ng-model="pre3" value="5" />
+                                <label for="malo3">Malo</label>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 4 -->
+                    <div class="pregunta animated" ng-show="pregunta == 4">
+                        <div class="col s12">
+                            <h5 class="center-align">Habitaciones</h5>
+                        </div>
+                        <div class="col s12 offset-s4">
+                            <p class="exce">
+                                <input name="group4" type="radio" id="exce4" ng-model="pre4" value="1" />
+                                <label for="exce4">Excelente</label>
+                            </p>
+                            <p class="mb">
+                                <input name="group4" type="radio" id="mb4" ng-model="pre4" value="2" />
+                                <label for="mb4">Muy bueno</label>
+                            </p>
+                            <p class="bn">
+                                <input name="group4" type="radio" id="bn4" ng-model="pre4" value="3" />
+                                <label for="bn4">Bueno</label>
+                            </p>
+                            <p class="reg">
+                                <input name="group4" type="radio" id="reg4" ng-model="pre4" value="4" />
+                                <label for="reg4">Regular</label>
+                            </p>
+                            <p class="malo">
+                                <input name="group4" type="radio" id="malo4" ng-model="pre4" value="5" />
+                                <label for="malo4">Malo</label>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 5 -->
+                    <div class="pregunta animated" ng-show="pregunta == 5">
+                        <div class="col s12">
+                            <h5 class="center-align">Check in y check out</h5>
+                        </div>
+                        <div class="col s12 offset-s4">
+                            <p class="exce">
+                                <input name="group5" type="radio" id="exce5" ng-model="pre5" value="1" />
+                                <label for="exce5">Excelente</label>
+                            </p>
+                            <p class="mb">
+                                <input name="group5" type="radio" id="mb5" ng-model="pre5" value="2" />
+                                <label for="mb5">Muy bueno</label>
+                            </p>
+                            <p class="bn">
+                                <input name="group5" type="radio" id="bn5" ng-model="pre5" value="3" />
+                                <label for="bn5">Bueno</label>
+                            </p>
+                            <p class="reg">
+                                <input name="group5" type="radio" id="reg5" ng-model="pre5" value="4" />
+                                <label for="reg5">Regular</label>
+                            </p>
+                            <p class="malo">
+                                <input name="group5" type="radio" id="malo5" ng-model="pre5" value="5" />
+                                <label for="malo5">Malo</label>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 6 -->
+                    <div class="pregunta animated" ng-show="pregunta == 6">
+                        <div class="col s12">
+                            <h5 class="center-align">Alimentos y bebidas de la Cena Clausura</h5>
+                        </div>
+                        <div class="col s12 offset-s4">
+                            <p class="exce">
+                                <input name="group6" type="radio" id="exce6" ng-model="pre6" value="1" />
+                                <label for="exce6">Excelente</label>
+                            </p>
+                            <p class="mb">
+                                <input name="group6" type="radio" id="mb6" ng-model="pre6" value="2" />
+                                <label for="mb6">Muy bueno</label>
+                            </p>
+                            <p class="bn">
+                                <input name="group6" type="radio" id="bn6" ng-model="pre6" value="3" />
+                                <label for="bn6">Bueno</label>
+                            </p>
+                            <p class="reg">
+                                <input name="group6" type="radio" id="reg6" ng-model="pre6" value="4" />
+                                <label for="reg6">Regular</label>
+                            </p>
+                            <p class="malo">
+                                <input name="group6" type="radio" id="malo6" ng-model="pre6" value="5" />
+                                <label for="malo6">Malo</label>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 7 -->
+                    <div class="pregunta animated" ng-show="pregunta == 7">
+                        <div class="col s12">
+                            <h5 class="center-align">Servicio de meseros</h5>
+                        </div>
+                        <div class="col s12 offset-s4">
+                            <p class="exce">
+                                <input name="group7" type="radio" id="exce7" ng-model="pre7" value="1" />
+                                <label for="exce7">Excelente</label>
+                            </p>
+                            <p class="mb">
+                                <input name="group7" type="radio" id="mb7" ng-model="pre7" value="2" />
+                                <label for="mb7">Muy bueno</label>
+                            </p>
+                            <p class="bn">
+                                <input name="group7" type="radio" id="bn7" ng-model="pre7" value="3" />
+                                <label for="bn7">Bueno</label>
+                            </p>
+                            <p class="reg">
+                                <input name="group7" type="radio" id="reg7" ng-model="pre7" value="4" />
+                                <label for="reg7">Regular</label>
+                            </p>
+                            <p class="malo">
+                                <input name="group7" type="radio" id="malo7" ng-model="pre7" value="5" />
+                                <label for="malo7">Malo</label>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 8 -->
+                    <div class="pregunta animated" ng-show="pregunta == 8">
+                        <div class="col s12">
+                            <h5 class="center-align">Imagen y presentación</h5>
+                        </div>
+                        <div class="col s12 offset-s4">
+                            <p class="exce">
+                                <input name="group8" type="radio" id="exce8" ng-model="pre8" value="1" />
+                                <label for="exce8">Excelente</label>
+                            </p>
+                            <p class="mb">
+                                <input name="group8" type="radio" id="mb8" ng-model="pre8" value="2" />
+                                <label for="mb8">Muy bueno</label>
+                            </p>
+                            <p class="bn">
+                                <input name="group8" type="radio" id="bn8" ng-model="pre8" value="3" />
+                                <label for="bn8">Bueno</label>
+                            </p>
+                            <p class="reg">
+                                <input name="group8" type="radio" id="reg8" ng-model="pre8" value="4" />
+                                <label for="reg8">Regular</label>
+                            </p>
+                            <p class="malo">
+                                <input name="group8" type="radio" id="malo8" ng-model="pre8" value="5" />
+                                <label for="malo8">Malo</label>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 9 -->
+                    <div class="pregunta animated" ng-show="pregunta == 9">
+                        <div class="col s12">
+                            <h5 class="center-align">Puntualidad</h5>
+                        </div>
+                        <div class="col s12 offset-s4">
+                            <p class="exce">
+                                <input name="group9" type="radio" id="exce9" ng-model="pre9" value="1" />
+                                <label for="exce9">Excelente</label>
+                            </p>
+                            <p class="mb">
+                                <input name="group9" type="radio" id="mb9" ng-model="pre9" value="2" />
+                                <label for="mb9">Muy bueno</label>
+                            </p>
+                            <p class="bn">
+                                <input name="group9" type="radio" id="bn9" ng-model="pre9" value="3" />
+                                <label for="bn9">Bueno</label>
+                            </p>
+                            <p class="reg">
+                                <input name="group9" type="radio" id="reg9" ng-model="pre9" value="4" />
+                                <label for="reg9">Regular</label>
+                            </p>
+                            <p class="malo">
+                                <input name="group9" type="radio" id="malo9" ng-model="pre9" value="5" />
+                                <label for="malo9">Malo</label>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 10 -->
+                    <div class="pregunta animated" ng-show="pregunta == 10">
+                        <div class="col s12">
+                            <h5 class="center-align">Recepción en el evento</h5>
+                        </div>
+                        <div class="col s12 offset-s4">
+                            <p class="exce">
+                                <input name="group10" type="radio" id="exce10" ng-model="pre10" value="1" />
+                                <label for="exce10">Excelente</label>
+                            </p>
+                            <p class="mb">
+                                <input name="group10" type="radio" id="mb10" ng-model="pre10" value="2" />
+                                <label for="mb10">Muy bueno</label>
+                            </p>
+                            <p class="bn">
+                                <input name="group10" type="radio" id="bn10" ng-model="pre10" value="3" />
+                                <label for="bn10">Bueno</label>
+                            </p>
+                            <p class="reg">
+                                <input name="group10" type="radio" id="reg10" ng-model="pre10" value="4" />
+                                <label for="reg10">Regular</label>
+                            </p>
+                            <p class="malo">
+                                <input name="group10" type="radio" id="malo10" ng-model="pre10" value="5" />
+                                <label for="malo10">Malo</label>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 11 -->
+                    <div class="pregunta animated" ng-show="pregunta == 11">
+                        <div class="col s12">
+                            <h5 class="center-align">Programa de conferencias</h5>
+                        </div>
+                        <div class="col s12 offset-s4">
+                            <p class="exce">
+                                <input name="group11" type="radio" id="exce11" ng-model="pre11" value="1" />
+                                <label for="exce11">Excelente</label>
+                            </p>
+                            <p class="mb">
+                                <input name="group11" type="radio" id="mb11" ng-model="pre11" value="2" />
+                                <label for="mb11">Muy bueno</label>
+                            </p>
+                            <p class="bn">
+                                <input name="group11" type="radio" id="bn11" ng-model="pre11" value="3" />
+                                <label for="bn11">Bueno</label>
+                            </p>
+                            <p class="reg">
+                                <input name="group11" type="radio" id="reg11" ng-model="pre11" value="4" />
+                                <label for="reg11">Regular</label>
+                            </p>
+                            <p class="malo">
+                                <input name="group11" type="radio" id="malo11" ng-model="pre11" value="5" />
+                                <label for="malo11">Malo</label>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 12 -->
+                    <div class="pregunta animated" ng-show="pregunta == 12">
+                        <div class="col s12">
+                            <h5 class="center-align">Contenido de conferencias</h5>
+                        </div>
+                        <div class="col s12 offset-s4">
+                            <p class="exce">
+                                <input name="group12" type="radio" id="exce12" ng-model="pre12" value="1" />
+                                <label for="exce12">Excelente</label>
+                            </p>
+                            <p class="mb">
+                                <input name="group12" type="radio" id="mb12" ng-model="pre12" value="2" />
+                                <label for="mb12">Muy bueno</label>
+                            </p>
+                            <p class="bn">
+                                <input name="group12" type="radio" id="bn12" ng-model="pre12" value="3" />
+                                <label for="bn12">Bueno</label>
+                            </p>
+                            <p class="reg">
+                                <input name="group12" type="radio" id="reg12" ng-model="pre12" value="4" />
+                                <label for="reg12">Regular</label>
+                            </p>
+                            <p class="malo">
+                                <input name="group12" type="radio" id="malo12" ng-model="pre12" value="5" />
+                                <label for="malo12">Malo</label>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 13 -->
+                    <div class="pregunta animated" ng-show="pregunta == 13">
+                        <div class="col s12">
+                            <h5 class="center-align">Conferencia de Doug Lipp</h5>
+                        </div>
+                        <div class="col s12 offset-s4">
+                            <p class="exce">
+                                <input name="group13" type="radio" id="exce13" ng-model="pre13" value="1" />
+                                <label for="exce13">Excelente</label>
+                            </p>
+                            <p class="mb">
+                                <input name="group13" type="radio" id="mb13" ng-model="pre13" value="2" />
+                                <label for="mb13">Muy bueno</label>
+                            </p>
+                            <p class="bn">
+                                <input name="group13" type="radio" id="bn13" ng-model="pre13" value="3" />
+                                <label for="bn13">Bueno</label>
+                            </p>
+                            <p class="reg">
+                                <input name="group13" type="radio" id="reg13" ng-model="pre13" value="4" />
+                                <label for="reg13">Regular</label>
+                            </p>
+                            <p class="malo">
+                                <input name="group13" type="radio" id="malo13" ng-model="pre13" value="5" />
+                                <label for="malo13">Malo</label>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 14 -->
+                    <div class="pregunta animated" ng-show="pregunta == 14">
+                        <div class="col s12">
+                            <h5 class="center-align">Conferencia de Abraham Levy</h5>
+                        </div>
+                        <div class="col s12 offset-s4">
+                            <p class="exce">
+                                <input name="group14" type="radio" id="exce14" ng-model="pre14" value="1" />
+                                <label for="exce14">Excelente</label>
+                            </p>
+                            <p class="mb">
+                                <input name="group14" type="radio" id="mb14" ng-model="pre14" value="2" />
+                                <label for="mb14">Muy bueno</label>
+                            </p>
+                            <p class="bn">
+                                <input name="group14" type="radio" id="bn14" ng-model="pre14" value="3" />
+                                <label for="bn14">Bueno</label>
+                            </p>
+                            <p class="reg">
+                                <input name="group14" type="radio" id="reg14" ng-model="pre14" value="4" />
+                                <label for="reg14">Regular</label>
+                            </p>
+                            <p class="malo">
+                                <input name="group14" type="radio" id="malo14" ng-model="pre14" value="5" />
+                                <label for="malo14">Malo</label>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 15 -->
+                    <div class="pregunta animated" ng-show="pregunta == 15">
+                        <div class="col s12">
+                            <h5 class="center-align">Decoración</h5>
+                        </div>
+                        <div class="col s12 offset-s4">
+                            <p class="exce">
+                                <input name="group15" type="radio" id="exce15" ng-model="pre15" value="1" />
+                                <label for="exce15">Excelente</label>
+                            </p>
+                            <p class="mb">
+                                <input name="group15" type="radio" id="mb15" ng-model="pre15" value="2" />
+                                <label for="mb15">Muy bueno</label>
+                            </p>
+                            <p class="bn">
+                                <input name="group15" type="radio" id="bn15" ng-model="pre15" value="3" />
+                                <label for="bn15">Bueno</label>
+                            </p>
+                            <p class="reg">
+                                <input name="group15" type="radio" id="reg15" ng-model="pre15" value="4" />
+                                <label for="reg15">Regular</label>
+                            </p>
+                            <p class="malo">
+                                <input name="group15" type="radio" id="malo15" ng-model="pre15" value="5" />
+                                <label for="malo15">Malo</label>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 16 -->
+                    <div class="pregunta animated" ng-show="pregunta == 16">
+                        <div class="col s12">
+                            <h5 class="center-align">Baile con botargas</h5>
+                        </div>
+                        <div class="col s12 offset-s4">
+                            <p class="exce">
+                                <input name="group16" type="radio" id="exce16" ng-model="pre16" value="1" />
+                                <label for="exce16">Excelente</label>
+                            </p>
+                            <p class="mb">
+                                <input name="group16" type="radio" id="mb16" ng-model="pre16" value="2" />
+                                <label for="mb16">Muy bueno</label>
+                            </p>
+                            <p class="bn">
+                                <input name="group16" type="radio" id="bn16" ng-model="pre16" value="3" />
+                                <label for="bn16">Bueno</label>
+                            </p>
+                            <p class="reg">
+                                <input name="group16" type="radio" id="reg16" ng-model="pre16" value="4" />
+                                <label for="reg16">Regular</label>
+                            </p>
+                            <p class="malo">
+                                <input name="group16" type="radio" id="malo16" ng-model="pre16" value="5" />
+                                <label for="malo16">Malo</label>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 17 -->
+                    <div class="pregunta animated" ng-show="pregunta == 17">
+                        <div class="col s12">
+                            <h5 class="center-align">Show magos “Joe y Moey”</h5>
+                        </div>
+                        <div class="col s12 offset-s4">
+                            <p class="exce">
+                                <input name="group17" type="radio" id="exce17" ng-model="pre17" value="1" />
+                                <label for="exce17">Excelente</label>
+                            </p>
+                            <p class="mb">
+                                <input name="group17" type="radio" id="mb17" ng-model="pre17" value="2" />
+                                <label for="mb17">Muy bueno</label>
+                            </p>
+                            <p class="bn">
+                                <input name="group17" type="radio" id="bn17" ng-model="pre17" value="3" />
+                                <label for="bn17">Bueno</label>
+                            </p>
+                            <p class="reg">
+                                <input name="group17" type="radio" id="reg17" ng-model="pre17" value="4" />
+                                <label for="reg17">Regular</label>
+                            </p>
+                            <p class="malo">
+                                <input name="group17" type="radio" id="malo17" ng-model="pre17" value="5" />
+                                <label for="malo17">Malo</label>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 18 -->
+                    <div class="pregunta animated" ng-show="pregunta == 18">
+                        <div class="col s12">
+                            <h5 class="center-align">Escenario</h5>
+                        </div>
+                        <div class="col s12 offset-s4">
+                            <p class="exce">
+                                <input name="group18" type="radio" id="exce18" ng-model="pre18" value="1" />
+                                <label for="exce18">Excelente</label>
+                            </p>
+                            <p class="mb">
+                                <input name="group18" type="radio" id="mb18" ng-model="pre18" value="2" />
+                                <label for="mb18">Muy bueno</label>
+                            </p>
+                            <p class="bn">
+                                <input name="group18" type="radio" id="bn18" ng-model="pre18" value="3" />
+                                <label for="bn18">Bueno</label>
+                            </p>
+                            <p class="reg">
+                                <input name="group18" type="radio" id="reg18" ng-model="pre18" value="4" />
+                                <label for="reg18">Regular</label>
+                            </p>
+                            <p class="malo">
+                                <input name="group18" type="radio" id="malo18" ng-model="pre18" value="5" />
+                                <label for="malo18">Malo</label>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 19 -->
+                    <div class="pregunta animated" ng-show="pregunta == 19">
+                        <div class="col s12">
+                            <h5 class="center-align">Videos</h5>
+                        </div>
+                        <div class="col s12 offset-s4">
+                            <p class="exce">
+                                <input name="group19" type="radio" id="exce19" ng-model="pre19" value="1" />
+                                <label for="exce19">Excelente</label>
+                            </p>
+                            <p class="mb">
+                                <input name="group19" type="radio" id="mb19" ng-model="pre19" value="2" />
+                                <label for="mb19">Muy bueno</label>
+                            </p>
+                            <p class="bn">
+                                <input name="group19" type="radio" id="bn19" ng-model="pre19" value="3" />
+                                <label for="bn19">Bueno</label>
+                            </p>
+                            <p class="reg">
+                                <input name="group19" type="radio" id="reg19" ng-model="pre19" value="4" />
+                                <label for="reg19">Regular</label>
+                            </p>
+                            <p class="malo">
+                                <input name="group19" type="radio" id="malo19" ng-model="pre19" value="5" />
+                                <label for="malo19">Malo</label>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 20 -->
+                    <div class="pregunta animated" ng-show="pregunta == 20">
+                        <div class="col s12">
+                            <h5 class="center-align">Calificación general del evento</h5>
+                        </div>
+                        <div class="col s12 offset-s4">
+                            <p class="exce">
+                                <input name="group20" type="radio" id="exce20" ng-model="pre20" value="1" />
+                                <label for="exce20">Excelente</label>
+                            </p>
+                            <p class="mb">
+                                <input name="group20" type="radio" id="mb20" ng-model="pre20" value="2" />
+                                <label for="mb20">Muy bueno</label>
+                            </p>
+                            <p class="bn">
+                                <input name="group20" type="radio" id="bn20" ng-model="pre20" value="3" />
+                                <label for="bn20">Bueno</label>
+                            </p>
+                            <p class="reg">
+                                <input name="group20" type="radio" id="reg20" ng-model="pre20" value="4" />
+                                <label for="reg20">Regular</label>
+                            </p>
+                            <p class="malo">
+                                <input name="group20" type="radio" id="malo20" ng-model="pre20" value="5" />
+                                <label for="malo20">Malo</label>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Pregunta 21 -->
+                    <div class="pregunta animated" ng-show="pregunta == 21">
+                        <div class="col s12">
+                            <h5 class="center-align">Comentarios y/o Sugerencias</h5>
+                        </div>
+                        <div class="input-field col s12">
+                            <textarea id="textarea1" class="materialize-textarea" ng-model="pre21"></textarea>
+                            <label for="textarea1">Nos encantaría recibir sus comentarios y/o sugerencias</label>
+                        </div>
+                    </div>                    
                 </div>
-            </div>
-            <div class="row center">
-                <a class="waves-effect waves-light btn"><i class="material-icons right">send</i>Siguiente</a>
-            </div>
+            </form>
+        </div>
+        <div class="row center" ng-show="btnTxt">
+            <a class="waves-effect waves-light btn" ng-click="siguiente()"><i class="material-icons right">send</i>{{btnTxt}}</a>
         </div>
     </div>
 </div>
