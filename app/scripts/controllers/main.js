@@ -8,7 +8,9 @@
  * Controller of the encuestaApp
  */
 angular.module('encuestaApp')
-    .controller('MainCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
+    .controller('MainCtrl', ['$scope', '$rootScope', 'FirebaseRTData', function($scope, $rootScope, FirebaseRTData) {
+
+    		$rootScope.noIns = false;
 
     		$scope.encuestaData = {}
 
@@ -40,6 +42,7 @@ angular.module('encuestaApp')
 					console.log($scope.encuestaData);
 					$('.pregunta').eq( indiceAct ).addClass('fadeOut');
 					$scope.btnTxt = null;
+					saveData();
 				} else {
 					$rootScope.numPregunta++;
 					if($scope.pregunta == 7) {
@@ -66,7 +69,7 @@ angular.module('encuestaApp')
 						$scope.btnTxt = 'Enviar';
 					}
 					$scope.encuestaData[preguntaAct] = $scope[preguntaAct];
-					console.log($scope.encuestaData);
+					// console.log($scope.encuestaData);
 					$('.pregunta').eq( indiceAct ).addClass('fadeOut');
 					$scope.pregunta++;
 					setTimeout(function(){
@@ -94,6 +97,18 @@ angular.module('encuestaApp')
 		});
 
 		slider.setAttribute('disabled', true);
+
+		function saveData() {
+			var ref = FirebaseRTData.ref('cuestionarios');
+			var newEntry = ref.push();
+			newEntry.set($scope.encuestaData)
+				.then(function() {
+				console.log('Synchronization succeeded');
+				})
+				.catch(function(error) {
+				console.log('Synchronization failed');
+				});
+		}
 
 		// Procesa datos que angular todavía no ha digerido
 		function digiere() {

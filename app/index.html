@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -31,22 +31,31 @@
     </nav>
     <div class="section no-pad-bot" id="index-banner">
         <div class="container">
-            <blockquote class="blue-grey-text text-lighten-1">
-                Gracias por realizar la Encuesta de Satisfacción  No tardará más de cinco minutos en completarla y nos será de gran ayuda para mejorar nuestros servicios.
-            </blockquote>
-            <h5 class="blue-grey-text">Instrucciones:</h5>
-            <p class="blue-grey-text text-lighten-3">
-                Por favor, valore los siguientes aspectos del evento marcando una “X” de acuerdo a la opción de respuesta que cubre su nivel de satisfacción:
-            </p>
-            <p class="blue-grey-text text-lighten-3 center-align">Pregunta {{numPregunta}} de 21</p>
-            <div id="sliderTest"></div>
-            <br>
-            <h1 class="header center orange-text">{{titulo}}</h1>
-            <h5 class="header center orange-text text-darken-3 subtitulo animated">{{subtitulo}}</h5>
-            <h6 class="header center blue-grey-text" ng-show="gracias">Gracias por tu participación</h6>
+            <div>
+                <p class="center"><img src="images/logo.png" alt=""></p>
+            </div>        
+            <div ng-if="!noIns">
+                <blockquote class="blue-grey-text text-lighten-1">
+                    Gracias por realizar la Encuesta de Satisfacción No tardará más de cinco minutos en completarla y nos será de gran ayuda para mejorar nuestros servicios.
+                </blockquote>
+                <h5 class="blue-grey-text">Instrucciones:</h5>
+                <p class="blue-grey-text text-lighten-3">
+                    Por favor, valore los siguientes aspectos del evento marcando una “X” de acuerdo a la opción de respuesta que cubre su nivel de satisfacción:
+                </p>
+                <p class="blue-grey-text text-lighten-3 center-align">Pregunta {{numPregunta}} de 21</p>
+                <div id="sliderTest"></div>
+                <br>
+                <h1 class="header center orange-text">{{titulo}}</h1>
+                <h5 class="header center orange-text text-darken-3 subtitulo animated">{{subtitulo}}</h5>
+                <h6 class="header center blue-grey-text" ng-show="gracias">Gracias por su participación</h6>
+            </div>
+            <h5 class="blue-grey-text" ng-if="noIns">Resultados:</h5>
+            <p class="blue-grey-text text-lighten-3" ng-if="noIns">
+                Suma de resultados por pregunta:
+            </p>            
             <div class="row center">
                 <!--   Main Section   -->
-                <div ng-view=""></div> 
+                <div ng-view=""></div>
             </div>
             <br>
             <br>
@@ -70,14 +79,19 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/materialize/dist/js/materialize.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/services/firebaseRTData.js"></script>
+    <script src="scripts/services/_.js"></script>
     <!-- endbuild -->
-    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-app.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-auth.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-database.js"></script>
     <script>
     // Initialize Firebase
     var config = {
@@ -90,6 +104,7 @@
     firebase.initializeApp(config);
     </script>
     <script src="bower_components/materialize/extras/noUiSlider/nouislider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.1/d3.min.js"></script>
 </body>
 
 </html>

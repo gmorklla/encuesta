@@ -60,7 +60,7 @@ body {
 }
 
 .carrete {
-  height: 260px;
+  height: 255px;
   overflow: hidden;
 }
 
@@ -109,6 +109,69 @@ body {
 h6 {
   font-size: 2em;
   padding-bottom: 25px;
+}
+
+.chart {
+  margin-bottom: 10px;
+  border: 1px dotted grey;
+  border-left: none;
+  border-right: none;
+  background-color: whitesmoke;
+}
+
+.chart span {
+  background-color: #ff9800;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.chart div {
+  margin-bottom: 2px;
+  color: white;
+}
+
+.leyenda div {
+  color: white;
+}
+
+.chart div:nth-child(1), .leyenda div:nth-child(1) {  
+  background-color: #00b169;
+  border: 2px solid #00b169;
+}
+
+.chart div:nth-child(2), .leyenda div:nth-child(2) {
+  background-color: #00d374;
+  border: 2px solid #00d374;
+}
+
+.chart div:nth-child(3), .leyenda div:nth-child(3) {
+  background-color: #f6ab36;
+  border: 2px solid #f6ab36;
+}
+
+.chart div:nth-child(4), .leyenda div:nth-child(4) {
+  background-color: #f2774b;
+  border: 2px solid #f2774b;
+}
+
+.chart div:nth-child(5), .leyenda div:nth-child(5) {
+  background-color: #ef4836;
+  border: 2px solid #ef4836;
+}
+
+.badgeDiv {
+  height: 40px;
+}
+
+.badgeDiv i {
+  position: relative;
+  top: 8px;
+}
+
+span.badge {
+  position: inherit;
+  padding: 5px;
 }
 
 /* Responsive: Portrait tablets and up */
